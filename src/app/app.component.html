@@ -1,0 +1,42 @@
+<div class="container">
+  <h1>Project Name:- {{title}}</h1>
+  <h1>Remove index:- {{name | slice:7}}</h1>
+  <h1>Capital :- {{name | uppercase}}</h1>
+  <h1>Small :- {{name | lowercase}}</h1>
+  <h1>FullName :- {{name | userid:'Ashwinduth' }}</h1>
+  <h1>Changes string to symbol:- {{0.61 | percent}}</h1>
+  <h2>Person details:-{{ person | json }}</h2>
+  <h2>Currency in india:-{{0.25 | currency :'india'}}</h2>
+  <h2>Date:-{{data | date }}</h2>
+  <h2>Standard Time:- {{ data }}</h2>
+
+  <button (click)="getuser()">getuser</button>
+  <div class="content">
+
+
+    <table>
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>phone</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let users of response">
+          <td>{{users.id | userid:users.id }}</td>
+          <td>{{users.name | uppercase}}</td>
+          <td>{{users.email | lowercase}}</td>
+          <td>{{users.phone}}</td>
+          <td>
+            <button>Edit</button>
+            <button>View</button>
+          </td>
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

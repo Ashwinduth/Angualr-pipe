@@ -1,0 +1,36 @@
+h1,h2{
+    color:grey;
+}
+.content{
+    display: flex;
+    justify-content: center;
+}
+table,th,td{
+    border: 1px solid black;
+    padding: 2px;
+   
+}
+
+table{
+    border-collapse: collapse;
+    margin-top:0px ;
+    
+   
+}
+
+th{
+    background: rgb(13, 19, 17);
+    color: rgb(210, 231, 228);
+    
+}
+td:hover{
+ background: rgb(36, 72, 156);
+ color: rgba(231, 241, 240, 0.876);
+ cursor: pointer;
+}
+button:hover{
+    background: rgb(63, 63, 228);
+    padding: 5px;
+    color: white;
+    
+}
